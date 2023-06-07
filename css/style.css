@@ -82,6 +82,7 @@ body {
   font-weight: bold;
 }
 .content button {
+  cursor: pointer;
   border-style: none;
   border-radius: 0.5em;
   background-color: var(--dark-cyan);
