@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --very-dark-cyan: hsl(158, 36%, 20%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  --fs-default: 14px;
+  --ff-base: "Montserrat", sans-serif;
+  --ff-theme: "Fraunces", serif;
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+source,
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-default);
+  background-color: var(--cream);
+  color: var(--dark-grayish-blue);
+  display: grid;
+  place-content: center;
+  padding: 1em;
+}
+
+.card {
+  background-color: var(--white);
+  display: grid;
+  border-radius: 1em;
+  overflow: hidden;
+}
+@media (min-width: 700px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 42.5em;
+  }
+}
+
+.content {
+  padding: 2em;
+  display: grid;
+  align-content: start;
+  gap: 1.5em;
+}
+.content .category {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+.content .title {
+  font-family: var(--ff-theme);
+  font-size: 2rem;
+  color: var(--very-dark-blue);
+  line-height: 1;
+}
+.content p {
+  line-height: 1.5;
+}
+.content .price {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.content .price .actual-price {
+  font-family: var(--ff-theme);
+  font-size: 2.3em;
+  color: var(--dark-cyan);
+  font-weight: bold;
+}
+.content button {
+  border-style: none;
+  border-radius: 0.5em;
+  background-color: var(--dark-cyan);
+  padding: 1em 2em;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.content button:is(:hover, :focus) {
+  background-color: var(--very-dark-cyan);
+}
+.content button::before {
+  content: "";
+  width: 15px;
+  height: 16px;
+  background: url(/images/icon-cart.svg);
+}/*# sourceMappingURL=style.css.map */
